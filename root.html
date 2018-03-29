@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>启驾学车</title>
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .bei {
+            width: 100%;
+            height: 100%;
+            background-image: url("img/root/root1.png");
+            background-size: cover;
+            background-position: 50% 0;
+            overflow: hidden;
+            z-index: -1;
+            position: fixed;
+        }
+        .fixed {
+            position: fixed;
+            font-size: 1.2rem;
+            font-family: 微软雅黑;
+            font-weight: bold;
+            width: 9.6rem;
+            height: 3.7rem;
+            line-height: 3.7rem;
+            border: 0.1rem solid #d9bb88;
+            color: #d9bb88;
+            text-align: center;
+        }
+        .p1 {
+            bottom: 1.4rem;
+            left: 2rem;
+        }
+        .p2 {
+            bottom: 1.4rem;
+            left: 13.5rem;
+        }
+        .p3 {
+            bottom: 1.4rem;
+            left: 25rem;
+        }
+        .p4 {
+            bottom: 1.4rem;
+            left: 36.8rem;
+        }
+        .tu1 {
+            width: 2.4rem;
+            height: 2rem;
+            background-image: url("img/root/vip (1).png");
+            background-size: 100% 100%;
+            float: left;
+            margin-left: 1.2rem;
+            margin-top: 0.8rem;
+        }
+        .tu2 {
+            width: 2rem;
+            height: 2rem;
+            background-image: url("img/root/产品管理.png");
+            background-size: 100% 100%;
+            float: left;
+            margin-left: 1.2rem;
+            margin-top: 0.8rem;
+        }
+        .tu3 {
+            width: 2rem;
+            height: 2rem;
+            background-image: url("img/root/问答.png");
+            background-size: 100% 100%;
+            float: left;
+            margin-left: 1.2rem;
+            margin-top: 0.8rem;
+        }
+        .tu4 {
+            width: 2rem;
+            height: 2rem;
+            background-image: url("img/root/VIP中心.png");
+            background-size: 100% 100%;
+            float: left;
+            margin-left: 1.2rem;
+            margin-top: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="bei" onclick="window.location.href='活动.html'"></div>
+    <div class="p1 fixed" onclick="window.location.href='root-1.html'"><div class="tu1"></div>会员专享</div>
+    <div class="p2 fixed" onclick="window.location.href='root-2.html'"><div class="tu2"></div>产品推荐</div>
+    <div class="p3 fixed" onclick="window.location.href='root-3.html'"><div class="tu3"></div>趣味问答</div>
+    <div class="p4 fixed" onclick="window.location.href='vip中心.html'"><div class="tu4"></div>VIP中心</div>
+</body>
+</html>
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+        document.getElementsByTagName("html")[0].style.fontSize = document.body.clientWidth/48 + "px";
+    });
+    window.onload = function () {
+        var i = 1;
+        function huan () {
+            if(i == 1) {
+                document.getElementsByClassName("bei")[0].style.backgroundImage = "url(img/root/root2.png)";
+                i++;
+            }else if(i == 2) {
+                document.getElementsByClassName("bei")[0].style.backgroundImage = "url(img/root/root3.png)";
+                i++;
+            }else if(i == 3) {
+                document.getElementsByClassName("bei")[0].style.backgroundImage = "url(img/root/root4.png)";
+                i++;
+            }else {
+                document.getElementsByClassName("bei")[0].style.backgroundImage = "url(img/root/root1.png)";
+                i = 1;
+            }
+        }
+        setInterval(huan,3000);
+    }
+    window.onresize = function () {
+        document.getElementsByTagName("html")[0].style.fontSize = document.body.clientWidth/48 + "px";
+    }
+</script>
